@@ -5,9 +5,9 @@ storage: ./storage
 #
 # This could be deprecated soon, use auth plugins instead (see htpasswd below).
 users:
-  admin:
+  mr47:
     # crypto.createHash('sha1').update(pass).digest('hex')
-    password: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+    password: 8e59eb1397f8e6f05e6f997c640009dba4d3a278
 
 web:
   # web interface is disabled by default in 0.x, will be enabled soon in 1.x
@@ -15,9 +15,9 @@ web:
   #
   # set this to `true` if you want to experiment with web ui now;
   # this has a lot of issues, e.g. no auth yet, so use at your own risk
-  #enable: true
+  enable: true
 
-  title: Sinopia
+  title: mr47 | npm mirror
   # logo: logo.png
   # template: custom.hbs
 
@@ -68,7 +68,7 @@ packages:
     access: $all
 
     # allow 'admin' to publish packages
-    publish: admin
+    publish: mr47
 
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
@@ -118,7 +118,7 @@ logs:
 
 # maximum size of uploaded json document
 # increase it if you have "request entity too large" errors
-#max_body_size: 1mb
+max_body_size: 2mb
 
 # Workaround for countless npm bugs. Must have for npm <1.14.x, but expect
 # it to be turned off in future versions. If `true`, latest tag is ignored,
